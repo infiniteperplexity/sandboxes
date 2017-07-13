@@ -1,0 +1,761 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData voxel-hello-world
+20 silly mapToRegistry name voxel-hello-world
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'voxel-hello-world',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'voxel-hello-world',
+23 silly mapToRegistry   name: 'voxel-hello-world',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/voxel-hello-world
+25 verbose request uri https://registry.npmjs.org/voxel-hello-world
+26 verbose request no auth needed
+27 info attempt registry request try #1 at 9:28:56 AM
+28 verbose request id 8379e2e7121e9e53
+29 verbose etag W/"51b20805-6659"
+30 verbose lastModified Fri, 07 Jun 2013 16:19:17 GMT
+31 http request GET https://registry.npmjs.org/voxel-hello-world
+32 http 304 https://registry.npmjs.org/voxel-hello-world
+33 verbose headers { date: 'Thu, 29 Jun 2017 16:28:56 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   etag: 'W/"51b20805-6659"',
+33 verbose headers   age: '0',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-jfk8121-JFK',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1498753737.799680,VS0,VE15',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 silly get cb [ 304,
+34 silly get   { date: 'Thu, 29 Jun 2017 16:28:56 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     etag: 'W/"51b20805-6659"',
+34 silly get     age: '0',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-jfk8121-JFK',
+34 silly get     'x-cache': 'MISS',
+34 silly get     'x-cache-hits': '0',
+34 silly get     'x-timer': 'S1498753737.799680,VS0,VE15',
+34 silly get     vary: 'Accept-Encoding' } ]
+35 verbose etag https://registry.npmjs.org/voxel-hello-world from cache
+36 verbose get saving voxel-hello-world to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel-hello-world\.cache.json
+37 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+38 silly resolveWithNewModule voxel-hello-world@0.6.0 checking installable status
+39 silly cache add args [ 'voxel-hello-world@0.6.0', null ]
+40 verbose cache add spec voxel-hello-world@0.6.0
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'voxel-hello-world@0.6.0',
+41 silly cache add   scope: null,
+41 silly cache add   escapedName: 'voxel-hello-world',
+41 silly cache add   name: 'voxel-hello-world',
+41 silly cache add   rawSpec: '0.6.0',
+41 silly cache add   spec: '0.6.0',
+41 silly cache add   type: 'version' }
+42 silly addNamed voxel-hello-world@0.6.0
+43 verbose addNamed "0.6.0" is a plain semver version for voxel-hello-world
+44 silly mapToRegistry name voxel-hello-world
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'voxel-hello-world',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'voxel-hello-world',
+47 silly mapToRegistry   name: 'voxel-hello-world',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/voxel-hello-world
+49 verbose addNameVersion registry:https://registry.npmjs.org/voxel-hello-world not in flight; fetching
+50 verbose get https://registry.npmjs.org/voxel-hello-world not expired, no request
+51 silly cache afterAdd voxel-hello-world@0.6.0
+52 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-hello-world\0.6.0\package\package.json not in flight; writing
+53 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+54 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-hello-world\0.6.0\package\package.json written
+55 silly fetchNamedPackageData voxel
+56 silly mapToRegistry name voxel
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'voxel',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   escapedName: 'voxel',
+59 silly mapToRegistry   name: 'voxel',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/voxel
+61 silly fetchNamedPackageData voxel-engine
+62 silly mapToRegistry name voxel-engine
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'voxel-engine',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   escapedName: 'voxel-engine',
+65 silly mapToRegistry   name: 'voxel-engine',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/voxel-engine
+67 silly fetchNamedPackageData voxel-highlight
+68 silly mapToRegistry name voxel-highlight
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'voxel-highlight',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   escapedName: 'voxel-highlight',
+71 silly mapToRegistry   name: 'voxel-highlight',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/voxel-highlight
+73 silly fetchNamedPackageData voxel-player
+74 silly mapToRegistry name voxel-player
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: 'voxel-player',
+77 silly mapToRegistry   scope: null,
+77 silly mapToRegistry   escapedName: 'voxel-player',
+77 silly mapToRegistry   name: 'voxel-player',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/voxel-player
+79 silly fetchNamedPackageData voxel-fly
+80 silly mapToRegistry name voxel-fly
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry data Result {
+83 silly mapToRegistry   raw: 'voxel-fly',
+83 silly mapToRegistry   scope: null,
+83 silly mapToRegistry   escapedName: 'voxel-fly',
+83 silly mapToRegistry   name: 'voxel-fly',
+83 silly mapToRegistry   rawSpec: '',
+83 silly mapToRegistry   spec: 'latest',
+83 silly mapToRegistry   type: 'tag' }
+84 silly mapToRegistry uri https://registry.npmjs.org/voxel-fly
+85 silly fetchNamedPackageData extend
+86 silly mapToRegistry name extend
+87 silly mapToRegistry using default registry
+88 silly mapToRegistry registry https://registry.npmjs.org/
+89 silly mapToRegistry data Result {
+89 silly mapToRegistry   raw: 'extend',
+89 silly mapToRegistry   scope: null,
+89 silly mapToRegistry   escapedName: 'extend',
+89 silly mapToRegistry   name: 'extend',
+89 silly mapToRegistry   rawSpec: '',
+89 silly mapToRegistry   spec: 'latest',
+89 silly mapToRegistry   type: 'tag' }
+90 silly mapToRegistry uri https://registry.npmjs.org/extend
+91 silly fetchOtherPackageData voxel-walk@git://github.com/flyswatter/voxel-walk.git
+92 silly cache add args [ 'voxel-walk@git://github.com/flyswatter/voxel-walk.git',
+92 silly cache add   null ]
+93 verbose cache add spec voxel-walk@git://github.com/flyswatter/voxel-walk.git
+94 silly cache add parsed spec Result {
+94 silly cache add   raw: 'voxel-walk@git://github.com/flyswatter/voxel-walk.git',
+94 silly cache add   scope: null,
+94 silly cache add   escapedName: 'voxel-walk',
+94 silly cache add   name: 'voxel-walk',
+94 silly cache add   rawSpec: 'git://github.com/flyswatter/voxel-walk.git',
+94 silly cache add   spec: 'git://github.com/flyswatter/voxel-walk.git',
+94 silly cache add   type: 'hosted',
+94 silly cache add   hosted:
+94 silly cache add    { type: 'github',
+94 silly cache add      ssh: 'git@github.com:flyswatter/voxel-walk.git',
+94 silly cache add      sshUrl: 'git+ssh://git@github.com/flyswatter/voxel-walk.git',
+94 silly cache add      httpsUrl: 'git+https://github.com/flyswatter/voxel-walk.git',
+94 silly cache add      gitUrl: 'git://github.com/flyswatter/voxel-walk.git',
+94 silly cache add      shortcut: 'github:flyswatter/voxel-walk',
+94 silly cache add      directUrl: 'https://raw.githubusercontent.com/flyswatter/voxel-walk/master/package.json' } }
+95 verbose addRemoteGit caching git://github.com/flyswatter/voxel-walk.git
+96 verbose addRemoteGit git://github.com/flyswatter/voxel-walk.git is a repository hosted by github
+97 silly tryClone cloning git://github.com/flyswatter/voxel-walk.git via git://github.com/flyswatter/voxel-walk.git
+98 verbose tryClone git-github-com-flyswatter-voxel-walk-git-6de1f200 not in flight; caching
+99 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+100 verbose request uri https://registry.npmjs.org/voxel
+101 verbose request no auth needed
+102 info attempt registry request try #1 at 9:28:56 AM
+103 verbose etag W/"54dd65d3-42e0"
+104 verbose lastModified Fri, 13 Feb 2015 02:47:47 GMT
+105 http request GET https://registry.npmjs.org/voxel
+106 verbose request uri https://registry.npmjs.org/voxel-highlight
+107 verbose request no auth needed
+108 info attempt registry request try #1 at 9:28:56 AM
+109 verbose etag W/"53efaeb9-2dad"
+110 verbose lastModified Sat, 16 Aug 2014 19:19:21 GMT
+111 http request GET https://registry.npmjs.org/voxel-highlight
+112 verbose request uri https://registry.npmjs.org/voxel-fly
+113 verbose request no auth needed
+114 info attempt registry request try #1 at 9:28:56 AM
+115 verbose etag W/"51f01e71-1e0c"
+116 verbose lastModified Wed, 24 Jul 2013 18:35:29 GMT
+117 http request GET https://registry.npmjs.org/voxel-fly
+118 verbose request uri https://registry.npmjs.org/voxel-player
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 9:28:56 AM
+121 verbose etag W/"512aaeeb-33b6"
+122 verbose lastModified Mon, 25 Feb 2013 00:23:07 GMT
+123 http request GET https://registry.npmjs.org/voxel-player
+124 verbose request uri https://registry.npmjs.org/voxel-engine
+125 verbose request no auth needed
+126 info attempt registry request try #1 at 9:28:56 AM
+127 verbose etag W/"55298ab6-1503f"
+128 verbose lastModified Sat, 11 Apr 2015 20:57:26 GMT
+129 http request GET https://registry.npmjs.org/voxel-engine
+130 verbose request uri https://registry.npmjs.org/extend
+131 verbose request no auth needed
+132 info attempt registry request try #1 at 9:28:56 AM
+133 verbose etag W/"59101189-41d9"
+134 verbose lastModified Mon, 08 May 2017 06:34:49 GMT
+135 http request GET https://registry.npmjs.org/extend
+136 http 304 https://registry.npmjs.org/voxel
+137 verbose headers { date: 'Thu, 29 Jun 2017 16:28:56 GMT',
+137 verbose headers   via: '1.1 varnish',
+137 verbose headers   'cache-control': 'max-age=300',
+137 verbose headers   etag: 'W/"54dd65d3-42e0"',
+137 verbose headers   age: '0',
+137 verbose headers   connection: 'keep-alive',
+137 verbose headers   'x-served-by': 'cache-jfk8121-JFK',
+137 verbose headers   'x-cache': 'MISS',
+137 verbose headers   'x-cache-hits': '0',
+137 verbose headers   'x-timer': 'S1498753737.978812,VS0,VE7',
+137 verbose headers   vary: 'Accept-Encoding' }
+138 silly get cb [ 304,
+138 silly get   { date: 'Thu, 29 Jun 2017 16:28:56 GMT',
+138 silly get     via: '1.1 varnish',
+138 silly get     'cache-control': 'max-age=300',
+138 silly get     etag: 'W/"54dd65d3-42e0"',
+138 silly get     age: '0',
+138 silly get     connection: 'keep-alive',
+138 silly get     'x-served-by': 'cache-jfk8121-JFK',
+138 silly get     'x-cache': 'MISS',
+138 silly get     'x-cache-hits': '0',
+138 silly get     'x-timer': 'S1498753737.978812,VS0,VE7',
+138 silly get     vary: 'Accept-Encoding' } ]
+139 verbose etag https://registry.npmjs.org/voxel from cache
+140 verbose get saving voxel to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel\.cache.json
+141 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+142 silly resolveWithNewModule voxel@0.3.1 checking installable status
+143 silly cache add args [ 'voxel@0.3.1', null ]
+144 verbose cache add spec voxel@0.3.1
+145 silly cache add parsed spec Result {
+145 silly cache add   raw: 'voxel@0.3.1',
+145 silly cache add   scope: null,
+145 silly cache add   escapedName: 'voxel',
+145 silly cache add   name: 'voxel',
+145 silly cache add   rawSpec: '0.3.1',
+145 silly cache add   spec: '0.3.1',
+145 silly cache add   type: 'version' }
+146 silly addNamed voxel@0.3.1
+147 verbose addNamed "0.3.1" is a plain semver version for voxel
+148 silly mapToRegistry name voxel
+149 silly mapToRegistry using default registry
+150 silly mapToRegistry registry https://registry.npmjs.org/
+151 silly mapToRegistry data Result {
+151 silly mapToRegistry   raw: 'voxel',
+151 silly mapToRegistry   scope: null,
+151 silly mapToRegistry   escapedName: 'voxel',
+151 silly mapToRegistry   name: 'voxel',
+151 silly mapToRegistry   rawSpec: '',
+151 silly mapToRegistry   spec: 'latest',
+151 silly mapToRegistry   type: 'tag' }
+152 silly mapToRegistry uri https://registry.npmjs.org/voxel
+153 verbose addNameVersion registry:https://registry.npmjs.org/voxel not in flight; fetching
+154 verbose get https://registry.npmjs.org/voxel not expired, no request
+155 info git [ 'config', '--get', 'remote.origin.url' ]
+156 silly cache afterAdd voxel@0.3.1
+157 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel\0.3.1\package\package.json not in flight; writing
+158 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+159 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel\0.3.1\package\package.json written
+160 http 304 https://registry.npmjs.org/extend
+161 verbose headers { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+161 verbose headers   via: '1.1 varnish',
+161 verbose headers   'cache-control': 'max-age=300',
+161 verbose headers   etag: 'W/"59101189-41d9"',
+161 verbose headers   age: '166',
+161 verbose headers   connection: 'keep-alive',
+161 verbose headers   'x-served-by': 'cache-jfk8143-JFK',
+161 verbose headers   'x-cache': 'HIT',
+161 verbose headers   'x-cache-hits': '17',
+161 verbose headers   'x-timer': 'S1498753737.167627,VS0,VE0',
+161 verbose headers   vary: 'Accept-Encoding' }
+162 silly get cb [ 304,
+162 silly get   { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+162 silly get     via: '1.1 varnish',
+162 silly get     'cache-control': 'max-age=300',
+162 silly get     etag: 'W/"59101189-41d9"',
+162 silly get     age: '166',
+162 silly get     connection: 'keep-alive',
+162 silly get     'x-served-by': 'cache-jfk8143-JFK',
+162 silly get     'x-cache': 'HIT',
+162 silly get     'x-cache-hits': '17',
+162 silly get     'x-timer': 'S1498753737.167627,VS0,VE0',
+162 silly get     vary: 'Accept-Encoding' } ]
+163 verbose etag https://registry.npmjs.org/extend from cache
+164 verbose get saving extend to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\extend\.cache.json
+165 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+166 http 304 https://registry.npmjs.org/voxel-player
+167 verbose headers { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+167 verbose headers   via: '1.1 varnish',
+167 verbose headers   'cache-control': 'max-age=300',
+167 verbose headers   etag: 'W/"512aaeeb-33b6"',
+167 verbose headers   age: '0',
+167 verbose headers   connection: 'keep-alive',
+167 verbose headers   'x-served-by': 'cache-jfk8138-JFK',
+167 verbose headers   'x-cache': 'MISS',
+167 verbose headers   'x-cache-hits': '0',
+167 verbose headers   'x-timer': 'S1498753737.165140,VS0,VE8',
+167 verbose headers   vary: 'Accept-Encoding' }
+168 silly get cb [ 304,
+168 silly get   { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+168 silly get     via: '1.1 varnish',
+168 silly get     'cache-control': 'max-age=300',
+168 silly get     etag: 'W/"512aaeeb-33b6"',
+168 silly get     age: '0',
+168 silly get     connection: 'keep-alive',
+168 silly get     'x-served-by': 'cache-jfk8138-JFK',
+168 silly get     'x-cache': 'MISS',
+168 silly get     'x-cache-hits': '0',
+168 silly get     'x-timer': 'S1498753737.165140,VS0,VE8',
+168 silly get     vary: 'Accept-Encoding' } ]
+169 verbose etag https://registry.npmjs.org/voxel-player from cache
+170 verbose get saving voxel-player to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel-player\.cache.json
+171 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+172 http 304 https://registry.npmjs.org/voxel-engine
+173 verbose headers { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+173 verbose headers   via: '1.1 varnish',
+173 verbose headers   'cache-control': 'max-age=300',
+173 verbose headers   etag: 'W/"55298ab6-1503f"',
+173 verbose headers   age: '0',
+173 verbose headers   connection: 'keep-alive',
+173 verbose headers   'x-served-by': 'cache-jfk8128-JFK',
+173 verbose headers   'x-cache': 'MISS',
+173 verbose headers   'x-cache-hits': '0',
+173 verbose headers   'x-timer': 'S1498753737.167216,VS0,VE7',
+173 verbose headers   vary: 'Accept-Encoding' }
+174 silly get cb [ 304,
+174 silly get   { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+174 silly get     via: '1.1 varnish',
+174 silly get     'cache-control': 'max-age=300',
+174 silly get     etag: 'W/"55298ab6-1503f"',
+174 silly get     age: '0',
+174 silly get     connection: 'keep-alive',
+174 silly get     'x-served-by': 'cache-jfk8128-JFK',
+174 silly get     'x-cache': 'MISS',
+174 silly get     'x-cache-hits': '0',
+174 silly get     'x-timer': 'S1498753737.167216,VS0,VE7',
+174 silly get     vary: 'Accept-Encoding' } ]
+175 verbose etag https://registry.npmjs.org/voxel-engine from cache
+176 verbose get saving voxel-engine to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel-engine\.cache.json
+177 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+178 silly resolveWithNewModule extend@1.1.3 checking installable status
+179 silly cache add args [ 'extend@1.1.3', null ]
+180 verbose cache add spec extend@1.1.3
+181 silly cache add parsed spec Result {
+181 silly cache add   raw: 'extend@1.1.3',
+181 silly cache add   scope: null,
+181 silly cache add   escapedName: 'extend',
+181 silly cache add   name: 'extend',
+181 silly cache add   rawSpec: '1.1.3',
+181 silly cache add   spec: '1.1.3',
+181 silly cache add   type: 'version' }
+182 silly addNamed extend@1.1.3
+183 verbose addNamed "1.1.3" is a plain semver version for extend
+184 silly mapToRegistry name extend
+185 silly mapToRegistry using default registry
+186 silly mapToRegistry registry https://registry.npmjs.org/
+187 silly mapToRegistry data Result {
+187 silly mapToRegistry   raw: 'extend',
+187 silly mapToRegistry   scope: null,
+187 silly mapToRegistry   escapedName: 'extend',
+187 silly mapToRegistry   name: 'extend',
+187 silly mapToRegistry   rawSpec: '',
+187 silly mapToRegistry   spec: 'latest',
+187 silly mapToRegistry   type: 'tag' }
+188 silly mapToRegistry uri https://registry.npmjs.org/extend
+189 verbose addNameVersion registry:https://registry.npmjs.org/extend not in flight; fetching
+190 verbose get https://registry.npmjs.org/extend not expired, no request
+191 warn deprecated extend@1.1.3: Please update to the latest version.
+192 silly cache afterAdd extend@1.1.3
+193 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\extend\1.1.3\package\package.json not in flight; writing
+194 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+195 silly resolveWithNewModule voxel-player@0.1.0 checking installable status
+196 silly cache add args [ 'voxel-player@0.1.0', null ]
+197 verbose cache add spec voxel-player@0.1.0
+198 silly cache add parsed spec Result {
+198 silly cache add   raw: 'voxel-player@0.1.0',
+198 silly cache add   scope: null,
+198 silly cache add   escapedName: 'voxel-player',
+198 silly cache add   name: 'voxel-player',
+198 silly cache add   rawSpec: '0.1.0',
+198 silly cache add   spec: '0.1.0',
+198 silly cache add   type: 'version' }
+199 silly addNamed voxel-player@0.1.0
+200 verbose addNamed "0.1.0" is a plain semver version for voxel-player
+201 silly mapToRegistry name voxel-player
+202 silly mapToRegistry using default registry
+203 silly mapToRegistry registry https://registry.npmjs.org/
+204 silly mapToRegistry data Result {
+204 silly mapToRegistry   raw: 'voxel-player',
+204 silly mapToRegistry   scope: null,
+204 silly mapToRegistry   escapedName: 'voxel-player',
+204 silly mapToRegistry   name: 'voxel-player',
+204 silly mapToRegistry   rawSpec: '',
+204 silly mapToRegistry   spec: 'latest',
+204 silly mapToRegistry   type: 'tag' }
+205 silly mapToRegistry uri https://registry.npmjs.org/voxel-player
+206 verbose addNameVersion registry:https://registry.npmjs.org/voxel-player not in flight; fetching
+207 verbose get https://registry.npmjs.org/voxel-player not expired, no request
+208 silly cache afterAdd voxel-player@0.1.0
+209 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-player\0.1.0\package\package.json not in flight; writing
+210 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+211 silly resolveWithNewModule voxel-engine@0.18.4 checking installable status
+212 silly cache add args [ 'voxel-engine@~0.18.0', null ]
+213 verbose cache add spec voxel-engine@~0.18.0
+214 silly cache add parsed spec Result {
+214 silly cache add   raw: 'voxel-engine@~0.18.0',
+214 silly cache add   scope: null,
+214 silly cache add   escapedName: 'voxel-engine',
+214 silly cache add   name: 'voxel-engine',
+214 silly cache add   rawSpec: '~0.18.0',
+214 silly cache add   spec: '>=0.18.0 <0.19.0',
+214 silly cache add   type: 'range' }
+215 silly addNamed voxel-engine@>=0.18.0 <0.19.0
+216 verbose addNamed ">=0.18.0 <0.19.0" is a valid semver range for voxel-engine
+217 silly addNameRange { name: 'voxel-engine',
+217 silly addNameRange   range: '>=0.18.0 <0.19.0',
+217 silly addNameRange   hasData: false }
+218 silly mapToRegistry name voxel-engine
+219 silly mapToRegistry using default registry
+220 silly mapToRegistry registry https://registry.npmjs.org/
+221 silly mapToRegistry data Result {
+221 silly mapToRegistry   raw: 'voxel-engine',
+221 silly mapToRegistry   scope: null,
+221 silly mapToRegistry   escapedName: 'voxel-engine',
+221 silly mapToRegistry   name: 'voxel-engine',
+221 silly mapToRegistry   rawSpec: '',
+221 silly mapToRegistry   spec: 'latest',
+221 silly mapToRegistry   type: 'tag' }
+222 silly mapToRegistry uri https://registry.npmjs.org/voxel-engine
+223 verbose addNameRange registry:https://registry.npmjs.org/voxel-engine not in flight; fetching
+224 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\extend\1.1.3\package\package.json written
+225 verbose get https://registry.npmjs.org/voxel-engine not expired, no request
+226 silly addNameRange number 2 { name: 'voxel-engine',
+226 silly addNameRange   range: '>=0.18.0 <0.19.0',
+226 silly addNameRange   hasData: true }
+227 silly addNameRange versions [ 'voxel-engine',
+227 silly addNameRange   [ '0.0.1',
+227 silly addNameRange     '0.0.2',
+227 silly addNameRange     '0.0.3',
+227 silly addNameRange     '0.0.4',
+227 silly addNameRange     '0.0.5',
+227 silly addNameRange     '0.0.6',
+227 silly addNameRange     '0.0.7',
+227 silly addNameRange     '0.0.8',
+227 silly addNameRange     '0.0.9',
+227 silly addNameRange     '0.1.2',
+227 silly addNameRange     '0.1.5',
+227 silly addNameRange     '0.1.7',
+227 silly addNameRange     '0.1.8',
+227 silly addNameRange     '0.1.9',
+227 silly addNameRange     '0.2.0',
+227 silly addNameRange     '0.2.1',
+227 silly addNameRange     '0.2.2',
+227 silly addNameRange     '0.2.3',
+227 silly addNameRange     '0.2.4',
+227 silly addNameRange     '0.2.5',
+227 silly addNameRange     '0.2.6',
+227 silly addNameRange     '0.2.7',
+227 silly addNameRange     '0.2.8',
+227 silly addNameRange     '0.2.9',
+227 silly addNameRange     '0.3.0',
+227 silly addNameRange     '0.3.1',
+227 silly addNameRange     '0.3.2',
+227 silly addNameRange     '0.3.3',
+227 silly addNameRange     '0.3.4',
+227 silly addNameRange     '0.3.5',
+227 silly addNameRange     '0.3.6',
+227 silly addNameRange     '0.3.7',
+227 silly addNameRange     '0.3.8',
+227 silly addNameRange     '0.3.9',
+227 silly addNameRange     '0.4.0',
+227 silly addNameRange     '0.4.1',
+227 silly addNameRange     '0.4.2',
+227 silly addNameRange     '0.4.3',
+227 silly addNameRange     '0.5.1',
+227 silly addNameRange     '0.5.2',
+227 silly addNameRange     '0.5.3',
+227 silly addNameRange     '0.5.5',
+227 silly addNameRange     '0.5.6',
+227 silly addNameRange     '0.5.7',
+227 silly addNameRange     '0.5.8',
+227 silly addNameRange     '0.6.0',
+227 silly addNameRange     '0.8.1',
+227 silly addNameRange     '0.9.0',
+227 silly addNameRange     '0.9.1',
+227 silly addNameRange     '0.10.0',
+227 silly addNameRange     '0.11.0',
+227 silly addNameRange     '0.12.0',
+227 silly addNameRange     '0.13.0',
+227 silly addNameRange     '0.14.0',
+227 silly addNameRange     '0.14.1',
+227 silly addNameRange     '0.14.2',
+227 silly addNameRange     '0.14.3',
+227 silly addNameRange     '0.14.4',
+227 silly addNameRange     '0.15.0',
+227 silly addNameRange     '0.16.0',
+227 silly addNameRange     '0.16.1',
+227 silly addNameRange     '0.16.2',
+227 silly addNameRange     '0.16.3',
+227 silly addNameRange     '0.17.0',
+227 silly addNameRange     '0.17.1',
+227 silly addNameRange     '0.17.2',
+227 silly addNameRange     '0.17.3',
+227 silly addNameRange     '0.18.0',
+227 silly addNameRange     '0.18.1',
+227 silly addNameRange     '0.18.2',
+227 silly addNameRange     '0.18.3',
+227 silly addNameRange     '0.18.4',
+227 silly addNameRange     '0.19.0',
+227 silly addNameRange     '0.20.0',
+227 silly addNameRange     '0.20.1',
+227 silly addNameRange     '0.20.2' ] ]
+228 silly addNamed voxel-engine@0.18.4
+229 verbose addNamed "0.18.4" is a plain semver version for voxel-engine
+230 http 304 https://registry.npmjs.org/voxel-highlight
+231 verbose headers { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+231 verbose headers   via: '1.1 varnish',
+231 verbose headers   'cache-control': 'max-age=300',
+231 verbose headers   etag: 'W/"53efaeb9-2dad"',
+231 verbose headers   age: '0',
+231 verbose headers   connection: 'keep-alive',
+231 verbose headers   'x-served-by': 'cache-jfk8147-JFK',
+231 verbose headers   'x-cache': 'MISS',
+231 verbose headers   'x-cache-hits': '0',
+231 verbose headers   'x-timer': 'S1498753737.159032,VS0,VE52',
+231 verbose headers   vary: 'Accept-Encoding' }
+232 silly get cb [ 304,
+232 silly get   { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+232 silly get     via: '1.1 varnish',
+232 silly get     'cache-control': 'max-age=300',
+232 silly get     etag: 'W/"53efaeb9-2dad"',
+232 silly get     age: '0',
+232 silly get     connection: 'keep-alive',
+232 silly get     'x-served-by': 'cache-jfk8147-JFK',
+232 silly get     'x-cache': 'MISS',
+232 silly get     'x-cache-hits': '0',
+232 silly get     'x-timer': 'S1498753737.159032,VS0,VE52',
+232 silly get     vary: 'Accept-Encoding' } ]
+233 verbose etag https://registry.npmjs.org/voxel-highlight from cache
+234 verbose get saving voxel-highlight to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel-highlight\.cache.json
+235 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+236 silly cache afterAdd voxel-engine@0.18.4
+237 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-engine\0.18.4\package\package.json not in flight; writing
+238 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+239 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-player\0.1.0\package\package.json written
+240 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-engine\0.18.4\package\package.json written
+241 http 304 https://registry.npmjs.org/voxel-fly
+242 verbose headers { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+242 verbose headers   via: '1.1 varnish',
+242 verbose headers   'cache-control': 'max-age=300',
+242 verbose headers   etag: 'W/"51f01e71-1e0c"',
+242 verbose headers   age: '0',
+242 verbose headers   connection: 'keep-alive',
+242 verbose headers   'x-served-by': 'cache-jfk8128-JFK',
+242 verbose headers   'x-cache': 'MISS',
+242 verbose headers   'x-cache-hits': '0',
+242 verbose headers   'x-timer': 'S1498753737.159638,VS0,VE74',
+242 verbose headers   vary: 'Accept-Encoding' }
+243 silly get cb [ 304,
+243 silly get   { date: 'Thu, 29 Jun 2017 16:28:57 GMT',
+243 silly get     via: '1.1 varnish',
+243 silly get     'cache-control': 'max-age=300',
+243 silly get     etag: 'W/"51f01e71-1e0c"',
+243 silly get     age: '0',
+243 silly get     connection: 'keep-alive',
+243 silly get     'x-served-by': 'cache-jfk8128-JFK',
+243 silly get     'x-cache': 'MISS',
+243 silly get     'x-cache-hits': '0',
+243 silly get     'x-timer': 'S1498753737.159638,VS0,VE74',
+243 silly get     vary: 'Accept-Encoding' } ]
+244 verbose etag https://registry.npmjs.org/voxel-fly from cache
+245 verbose get saving voxel-fly to C:\Users\M543015\AppData\Roaming\npm-cache\registry.npmjs.org\voxel-fly\.cache.json
+246 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+247 silly resolveWithNewModule voxel-highlight@0.0.9 checking installable status
+248 silly cache add args [ 'voxel-highlight@0.0.9', null ]
+249 verbose cache add spec voxel-highlight@0.0.9
+250 silly cache add parsed spec Result {
+250 silly cache add   raw: 'voxel-highlight@0.0.9',
+250 silly cache add   scope: null,
+250 silly cache add   escapedName: 'voxel-highlight',
+250 silly cache add   name: 'voxel-highlight',
+250 silly cache add   rawSpec: '0.0.9',
+250 silly cache add   spec: '0.0.9',
+250 silly cache add   type: 'version' }
+251 silly addNamed voxel-highlight@0.0.9
+252 verbose addNamed "0.0.9" is a plain semver version for voxel-highlight
+253 silly mapToRegistry name voxel-highlight
+254 silly mapToRegistry using default registry
+255 silly mapToRegistry registry https://registry.npmjs.org/
+256 silly mapToRegistry data Result {
+256 silly mapToRegistry   raw: 'voxel-highlight',
+256 silly mapToRegistry   scope: null,
+256 silly mapToRegistry   escapedName: 'voxel-highlight',
+256 silly mapToRegistry   name: 'voxel-highlight',
+256 silly mapToRegistry   rawSpec: '',
+256 silly mapToRegistry   spec: 'latest',
+256 silly mapToRegistry   type: 'tag' }
+257 silly mapToRegistry uri https://registry.npmjs.org/voxel-highlight
+258 verbose addNameVersion registry:https://registry.npmjs.org/voxel-highlight not in flight; fetching
+259 verbose get https://registry.npmjs.org/voxel-highlight not expired, no request
+260 silly cache afterAdd voxel-highlight@0.0.9
+261 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-highlight\0.0.9\package\package.json not in flight; writing
+262 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+263 silly resolveWithNewModule voxel-fly@0.1.2 checking installable status
+264 silly cache add args [ 'voxel-fly@~0.1.0', null ]
+265 verbose cache add spec voxel-fly@~0.1.0
+266 silly cache add parsed spec Result {
+266 silly cache add   raw: 'voxel-fly@~0.1.0',
+266 silly cache add   scope: null,
+266 silly cache add   escapedName: 'voxel-fly',
+266 silly cache add   name: 'voxel-fly',
+266 silly cache add   rawSpec: '~0.1.0',
+266 silly cache add   spec: '>=0.1.0 <0.2.0',
+266 silly cache add   type: 'range' }
+267 silly addNamed voxel-fly@>=0.1.0 <0.2.0
+268 verbose addNamed ">=0.1.0 <0.2.0" is a valid semver range for voxel-fly
+269 silly addNameRange { name: 'voxel-fly', range: '>=0.1.0 <0.2.0', hasData: false }
+270 silly mapToRegistry name voxel-fly
+271 silly mapToRegistry using default registry
+272 silly mapToRegistry registry https://registry.npmjs.org/
+273 silly mapToRegistry data Result {
+273 silly mapToRegistry   raw: 'voxel-fly',
+273 silly mapToRegistry   scope: null,
+273 silly mapToRegistry   escapedName: 'voxel-fly',
+273 silly mapToRegistry   name: 'voxel-fly',
+273 silly mapToRegistry   rawSpec: '',
+273 silly mapToRegistry   spec: 'latest',
+273 silly mapToRegistry   type: 'tag' }
+274 silly mapToRegistry uri https://registry.npmjs.org/voxel-fly
+275 verbose addNameRange registry:https://registry.npmjs.org/voxel-fly not in flight; fetching
+276 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-highlight\0.0.9\package\package.json written
+277 verbose get https://registry.npmjs.org/voxel-fly not expired, no request
+278 silly addNameRange number 2 { name: 'voxel-fly', range: '>=0.1.0 <0.2.0', hasData: true }
+279 silly addNameRange versions [ 'voxel-fly', [ '0.1.0', '0.1.1', '0.1.2' ] ]
+280 silly addNamed voxel-fly@0.1.2
+281 verbose addNamed "0.1.2" is a plain semver version for voxel-fly
+282 silly cache afterAdd voxel-fly@0.1.2
+283 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-fly\0.1.2\package\package.json not in flight; writing
+284 verbose correctMkdir C:\Users\M543015\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+285 verbose afterAdd C:\Users\M543015\AppData\Roaming\npm-cache\voxel-fly\0.1.2\package\package.json written
+286 warn addRemoteGit Error: Command failed: git -c core.longpaths=true config --get remote.origin.url
+286 warn addRemoteGit
+286 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:204:12)
+286 warn addRemoteGit     at emitTwo (events.js:106:13)
+286 warn addRemoteGit     at ChildProcess.emit (events.js:191:7)
+286 warn addRemoteGit     at maybeClose (internal/child_process.js:886:16)
+286 warn addRemoteGit     at Socket.<anonymous> (internal/child_process.js:342:11)
+286 warn addRemoteGit     at emitOne (events.js:96:13)
+286 warn addRemoteGit     at Socket.emit (events.js:188:7)
+286 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:501:12)
+286 warn addRemoteGit  git://github.com/flyswatter/voxel-walk.git resetting remote C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200 because of error: { Error: Command failed: git -c core.longpaths=true config --get remote.origin.url
+286 warn addRemoteGit
+286 warn addRemoteGit     at ChildProcess.exithandler (child_process.js:204:12)
+286 warn addRemoteGit     at emitTwo (events.js:106:13)
+286 warn addRemoteGit     at ChildProcess.emit (events.js:191:7)
+286 warn addRemoteGit     at maybeClose (internal/child_process.js:886:16)
+286 warn addRemoteGit     at Socket.<anonymous> (internal/child_process.js:342:11)
+286 warn addRemoteGit     at emitOne (events.js:96:13)
+286 warn addRemoteGit     at Socket.emit (events.js:188:7)
+286 warn addRemoteGit     at Pipe._handle.close [as _onclose] (net.js:501:12)
+286 warn addRemoteGit   killed: false,
+286 warn addRemoteGit   code: 1,
+286 warn addRemoteGit   signal: null,
+286 warn addRemoteGit   cmd: 'git -c core.longpaths=true config --get remote.origin.url' }
+287 info resetRemote resetting C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200 for git://github.com/flyswatter/voxel-walk.git
+288 silly gentlyRm C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200 is being purged
+289 verbose gentlyRm don't care about contents; nuking C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+290 silly vacuum-fs purging C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+291 silly vacuum-fs quitting because other entries in C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes
+292 info git [ 'clone',
+292 info git   '--template=C:\\Users\\M543015\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates',
+292 info git   '--mirror',
+292 info git   'git://github.com/flyswatter/voxel-walk.git',
+292 info git   'C:\\Users\\M543015\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-flyswatter-voxel-walk-git-6de1f200' ]
+293 error git clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200: Cloning into bare repository 'C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200'...
+293 error git clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200: fatal: read error: Invalid argument
+294 silly fetchPackageMetaData Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+294 silly fetchPackageMetaData Cloning into bare repository 'C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200'...
+294 silly fetchPackageMetaData fatal: read error: Invalid argument
+294 silly fetchPackageMetaData
+294 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:204:12)
+294 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+294 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+294 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:886:16)
+294 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+294 silly fetchPackageMetaData  error for voxel-walk@git://github.com/flyswatter/voxel-walk.git { Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+294 silly fetchPackageMetaData Cloning into bare repository 'C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200'...
+294 silly fetchPackageMetaData fatal: read error: Invalid argument
+294 silly fetchPackageMetaData
+294 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:204:12)
+294 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+294 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+294 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:886:16)
+294 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+294 silly fetchPackageMetaData   killed: false,
+294 silly fetchPackageMetaData   code: 128,
+294 silly fetchPackageMetaData   signal: null,
+294 silly fetchPackageMetaData   cmd: 'git -c core.longpaths=true clone --template=C:\\Users\\M543015\\AppData\\Roaming\\npm-cache\\_git-remotes\\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\\Users\\M543015\\AppData\\Roaming\\npm-cache\\_git-remotes\\git-github-com-flyswatter-voxel-walk-git-6de1f200' }
+295 silly rollbackFailedOptional Starting
+296 silly rollbackFailedOptional Finishing
+297 silly runTopLevelLifecycles Finishing
+298 silly install printInstalled
+299 verbose stack Error: Command failed: git -c core.longpaths=true clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+299 verbose stack Cloning into bare repository 'C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200'...
+299 verbose stack fatal: read error: Invalid argument
+299 verbose stack
+299 verbose stack     at ChildProcess.exithandler (child_process.js:204:12)
+299 verbose stack     at emitTwo (events.js:106:13)
+299 verbose stack     at ChildProcess.emit (events.js:191:7)
+299 verbose stack     at maybeClose (internal/child_process.js:886:16)
+299 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+300 verbose cwd C:\Users\M543015\Desktop\GitHub\sandboxes\voxeljs
+301 error Windows_NT 6.1.7601
+302 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+303 error node v6.10.2
+304 error npm  v3.10.10
+305 error code 128
+306 error Command failed: git -c core.longpaths=true clone --template=C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/flyswatter/voxel-walk.git C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200
+306 error Cloning into bare repository 'C:\Users\M543015\AppData\Roaming\npm-cache\_git-remotes\git-github-com-flyswatter-voxel-walk-git-6de1f200'...
+306 error fatal: read error: Invalid argument
+307 error If you need help, you may report this error at:
+307 error     <https://github.com/npm/npm/issues>
+308 verbose exit [ 1, true ]

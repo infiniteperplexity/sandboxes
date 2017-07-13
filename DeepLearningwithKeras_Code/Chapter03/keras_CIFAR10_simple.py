@@ -19,6 +19,7 @@ NB_EPOCH = 20
 NB_CLASSES = 10
 VERBOSE = 1
 VALIDATION_SPLIT = 0.2
+#why is this a function?  I guess it's a constructor.
 OPTIM = RMSprop()
 
 
@@ -41,19 +42,19 @@ X_test /= 255
 # network
 
 model = Sequential()
-model.add(Conv2D(32, (3, 3), padding='same',
-                 input_shape=(IMG_ROWS, IMG_COLS, IMG_CHANNELS)))
+# 32 filters that are 3x3, channels last format
+model.add(Conv2D(32, (3, 3), padding='same', input_shape=(IMG_ROWS, IMG_COLS, IMG_CHANNELS)))
 model.add(Activation('relu'))
+# why no stride length?  is 2 the default in this case?
 model.add(MaxPooling2D(pool_size=(2, 2)))
+#this time we use dropout
 model.add(Dropout(0.25))
-  
 model.add(Flatten())
 model.add(Dense(512))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
 model.add(Dense(NB_CLASSES))
 model.add(Activation('softmax'))
-
 model.summary()
 
 # train

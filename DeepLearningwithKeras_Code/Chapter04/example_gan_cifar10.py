@@ -17,9 +17,62 @@ from keras_adversarial import AdversarialModel, simple_gan, gan_targets
 from keras_adversarial import AdversarialOptimizerSimultaneous, normal_latent_sampling
 from keras_adversarial.legacy import Dense, BatchNormalization, fit, l1l2, Convolution2D, AveragePooling2D
 import keras.backend as K
-from cifar10_utils import cifar10_data
-from image_utils import dim_ordering_fix, dim_ordering_unfix, dim_ordering_shape
+#from cifar10_utils import cifar10_data
+from keras.layers import Input, Reshape
 
+
+def dim_ordering_fix(x):
+    if K.image_dim_ordering() == 'th':
+        return x
+    else:
+        return np.transpose(x, (0, 2, 3, 1))
+
+
+def dim_ordering_unfix(x):
+    if K.image_dim_ordering() == 'th':
+        return x
+    else:
+        return np.transpose(x, (0, 3, 1, 2))
+
+
+def dim_ordering_shape(input_shape):
+    if K.image_dim_ordering() == 'th':
+        return input_shape
+    else:
+        return (input_shape[1], input_shape[2], input_shape[0])
+
+
+def dim_ordering_input(input_shape, name):
+    if K.image_dim_ordering() == 'th':
+        return Input(input_shape, name=name)
+    else:
+        return Input((input_shape[1], input_shape[2], input_shape[0]), name=name)
+
+
+def dim_ordering_reshape(k, w, **kwargs):
+    if K.image_dim_ordering() == 'th':
+        return Reshape((k, w, w), **kwargs)
+    else:
+        return Reshape((w, w, k), **kwargs)
+
+
+def channel_axis():
+    if K.image_dim_ordering() == 'th':
+        return 1
+    else:
+        return 3
+
+from keras.datasets import cifar10
+
+
+def cifar10_process(x):
+    x = x.astype(np.float32) / 255.0
+    return x
+
+
+def cifar10_data():
+    (xtrain, ytrain), (xtest, ytest) = cifar10.load_data()
+    return cifar10_process(xtrain), cifar10_process(xtest)
 
 def model_generator():
     model = Sequential()
@@ -29,15 +82,15 @@ def model_generator():
     model.add(Dense(nch * 4 * 4, input_dim=100, W_regularizer=reg()))
     model.add(BatchNormalization(mode=0))
     model.add(Reshape(dim_ordering_shape((nch, 4, 4))))
-    model.add(Convolution2D(nch / 2, h, h, border_mode='same', W_regularizer=reg()))
+    model.add(Convolution2D(int(nch / 2), h, h, border_mode='same', W_regularizer=reg()))
     model.add(BatchNormalization(mode=0, axis=1))
     model.add(LeakyReLU(0.2))
     model.add(UpSampling2D(size=(2, 2)))
-    model.add(Convolution2D(nch / 2, h, h, border_mode='same', W_regularizer=reg()))
+    model.add(Convolution2D(int(nch / 2), h, h, border_mode='same', W_regularizer=reg()))
     model.add(BatchNormalization(mode=0, axis=1))
     model.add(LeakyReLU(0.2))
     model.add(UpSampling2D(size=(2, 2)))
-    model.add(Convolution2D(nch / 4, h, h, border_mode='same', W_regularizer=reg()))
+    model.add(Convolution2D(int(nch / 4), h, h, border_mode='same', W_regularizer=reg()))
     model.add(BatchNormalization(mode=0, axis=1))
     model.add(LeakyReLU(0.2))
     model.add(UpSampling2D(size=(2, 2)))
@@ -51,9 +104,9 @@ def model_discriminator():
     h = 5
     reg = lambda: l1l2(l1=1e-7, l2=1e-7)
 
-    c1 = Convolution2D(nch / 4, h, h, border_mode='same', W_regularizer=reg(),
+    c1 = Convolution2D(int(nch / 4), h, h, border_mode='same', W_regularizer=reg(),
                        input_shape=dim_ordering_shape((3, 32, 32)))
-    c2 = Convolution2D(nch / 2, h, h, border_mode='same', W_regularizer=reg())
+    c2 = Convolution2D(int(nch / 2), h, h, border_mode='same', W_regularizer=reg())
     c3 = Convolution2D(nch, h, h, border_mode='same', W_regularizer=reg())
     c4 = Convolution2D(1, h, h, border_mode='same', W_regularizer=reg())
 
@@ -115,7 +168,7 @@ def example_gan(adversarial_optimizer, path, opt_g, opt_d, nb_epoch, generator, 
     if K.backend() == "tensorflow":
         callbacks.append(
             TensorBoard(log_dir=os.path.join(path, 'logs'), histogram_freq=0, write_graph=True, write_images=True))
-    history = fit(model, x=dim_ordering_fix(xtrain), y=y, validation_data=(dim_ordering_fix(xtest), ytest),
+    history = fit(model, x=xtrain, y=y, validation_data=xtest, ytest),
                   callbacks=callbacks, nb_epoch=nb_epoch,
                   batch_size=32)
 
