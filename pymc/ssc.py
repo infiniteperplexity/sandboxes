@@ -1,16 +1,16 @@
-	import pymc as pm
-	import numpy as np
-	import matplotlib.pyplot as plt
+import pymc as pm
+import numpy as np
+import matplotlib.pyplot as plt
 
-	#path = "C:/Users/M543015/Desktop/GitHub/sandboxes/pymc/"
-	path = "C:/Users/Glenn Wright/Documents/GitHub/sandboxes/pymc/"
-	import csv
+path = "C:/Users/M543015/Desktop/GitHub/sandboxes/pymc/"
+#path = "C:/Users/Glenn Wright/Documents/GitHub/sandboxes/pymc/"
+import csv
 
-	with open(path+"Survey_CSV.csv") as f:
-		reader = csv.reader(f)
-		indata = [row for row in reader]
-		headers = indata[0]
-		data = indata[1:]
+with open(path+"Survey_CSV.csv") as f:
+	reader = csv.reader(f)
+	indata = [row for row in reader]
+	headers = indata[0]
+	data = indata[1:]
 
 for n, item in enumerate(headers):
 	print(n, item)
@@ -18,6 +18,9 @@ for n, item in enumerate(headers):
 dancer = [row[62] for row in data]
 mask = [row[65] for row in data]
 gender = [row[4] for row in data]
+sjid = [row [27] for row in data]
+polaff = [row[29] for row in data]
+ampart = [row[31] for row in data]
 
 
 def freq(lst):
@@ -87,3 +90,98 @@ model(68,condition,62,weakdancer)
 model(68,condition,65,weakmask)
 model(69,condition,62,weakdancer)
 model(69,condition,65,weakmask)
+
+
+
+usedata = [(row[65] in weakmask, int(row[30])) for row in data if row[30] != ' ']
+libmask = [row[0] for row in usedata]
+liberal = [11-row[1] for row in usedata]
+
+
+#set up logistic model
+beta = pm.Normal("beta",0,0.001, value=0)
+alpha = pm.Normal("alpha",0,0.001, value=0)
+
+@pm.deterministic
+def p(pol=liberal, alpha=alpha, beta=beta):
+    return 1.0/(1.0+np.exp(alpha-beta*pol))
+
+bern = pm.Bernoulli("bern", p, value=libmask, observed=True)
+model = pm.Model([bern, beta, alpha])
+map_ = pm.MAP(model)
+map_.fit()
+mcmc = pm.MCMC(model)
+mcmc.sample(120000,100000,2)
+alphas = mcmc.trace('alpha')[:, None]
+base = 1/(1+np.exp(alphas))
+plt.hist(base, range=(0,0.1),bins=25)
+betas = mcmc.trace('beta')[:, None]
+odds = np.exp(betas)
+plt.gcf().clear()
+plt.hist(odds)
+
+
+"""
+#older code, not generalized
+
+dancer = [row[62] for row in data]
+mask = [row[65] for row in data]
+gender = [row[4] for row in data]
+
+ncis = len([value for value in gender if value not in trans])
+ntrans = len([value for value in gender if value in trans])
+
+ncisweakmask = len([row for row in data if row[4] not in trans and row[65] in weakmask])
+ntransweakmask = len([row for row in data if row[4] in trans and row[65] in weakmask])
+
+pmaskcis = pm.Uniform('pmaskcis',0.0,1.0)
+pmasktrans = pm.Uniform('pmasktrans',0.0,1.0)
+
+binmaskcis = pm.Binomial('binmaskcis',n=ncis, p=pmaskcis,value=ncisweakmask,observed=True)
+binmasktrans = pm.Binomial('binmasktrans',n=ntrans, p=pmasktrans,value=ntransweakmask,observed=True)
+
+modelmaskcis = pm.Model([pmaskcis,binmaskcis])
+modelmasktrans = pm.Model([pmasktrans,binmasktrans])
+
+mcmaskcis = pm.MCMC(modelmaskcis)
+mcmaskcis.sample(iter=50000,burn=10000)
+mcmasktrans = pm.MCMC(modelmasktrans)
+mcmasktrans.sample(iter=50000,burn=10000)
+ratios = mcmasktrans.trace('pmasktrans')[:, None]/mcmaskcis.trace('pmaskcis')[:, None]
+plt.hist(ratios)
+
+sum(ratio>1 for ratio in ratios)/len(ratios)
+sum(ratio>1.5 for ratio in ratios)/len(ratios)
+sum(ratio>2 for ratio in ratios)/len(ratios)
+
+sum(ratios)/len(ratios)
+
+
+ncisweakdancer = len([row for row in data if row[4] not in trans and row[62] in weakdancer])
+ntransweakdancer = len([row for row in data if row[4] in trans and row[62] in weakdancer])
+
+pdancercis = pm.Uniform('pdancercis',0.0,1.0)
+pdancertrans = pm.Uniform('pdancertrans',0.0,1.0)
+
+
+bindancercis = pm.Binomial('bindancercis',n=ncis, p=pdancercis,value=ncisweakdancer,observed=True)
+bindancertrans = pm.Binomial('bindancertrans',n=ntrans, p=pdancertrans,value=ntransweakdancer,observed=True)
+
+modeldancercis = pm.Model([pdancercis,bindancercis])
+modeldancertrans = pm.Model([pdancertrans,bindancertrans])
+
+mcdancercis = pm.MCMC(modeldancercis)
+mcdancercis.sample(iter=50000,burn=10000)
+mcdancertrans = pm.MCMC(modeldancertrans)
+mcdancertrans.sample(iter=50000,burn=10000)
+ratios = mcdancertrans.trace('pdancertrans')[:, None]/mcdancercis.trace('pdancercis')[:, None]
+plt.hist(ratios)
+
+sum(ratio>1 for ratio in ratios)/len(ratios)
+sum(ratio>1.1 for ratio in ratios)/len(ratios)
+sum(ratio>1.2 for ratio in ratios)/len(ratios)
+sum(ratio>1.3 for ratio in ratios)/len(ratios)
+
+sum(ratios)/len(ratios) 
+
+"""
