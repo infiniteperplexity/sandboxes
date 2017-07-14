@@ -1,16 +1,16 @@
-import pymc as pm
-import numpy as np
-import matplotlib.pyplot as plt
+	import pymc as pm
+	import numpy as np
+	import matplotlib.pyplot as plt
 
-#path = "C:/Users/M543015/Desktop/GitHub/sandboxes/pymc/"
-path = "C:/Users/Glenn Wright/Documents/GitHub/sandboxes/pymc/"
-import csv
+	#path = "C:/Users/M543015/Desktop/GitHub/sandboxes/pymc/"
+	path = "C:/Users/Glenn Wright/Documents/GitHub/sandboxes/pymc/"
+	import csv
 
-with open(path+"Survey_CSV.csv") as f:
-	reader = csv.reader(f)
-	indata = [row for row in reader]
-	headers = indata[0]
-	data = indata[1:]
+	with open(path+"Survey_CSV.csv") as f:
+		reader = csv.reader(f)
+		indata = [row for row in reader]
+		headers = indata[0]
+		data = indata[1:]
 
 for n, item in enumerate(headers):
 	print(n, item)
@@ -53,12 +53,6 @@ transf = 'F (transgender m -> f)'
 transm = 'M (transgender f -> m)'
 trans = (transf,transm)
 
-schizo = [row[68] for row in data]
-autism = [row[69] for row in data]
-
-freq(schizo)
-freq(autism)
-
 condition = (
 	'I think I might have this condition, although I have never been formally diagnosed',
 	'I have a formal diagnosis of this condition'
@@ -81,8 +75,15 @@ def model(q1, vals1, q2, vals2):
 	mc0.sample(iter=50000,burn=10000)
 	mc1 = pm.MCMC(m1)
 	mc1.sample(iter=50000,burn=10000)
-	ratios = mc0.trace('p0')[:, None]/mc1.trace('p1')[:, None]
+	ratios = mc1.trace('p1')[:, None]/mc0.trace('p0')[:, None]
 	print(sum(ratios)/len(ratios))
 	plt.hist(ratios)
-	table = [(i, sum(ratio>i for ratio in ratios)/len(ratios)) for i in range(1,2,0.1)]
-	print table
+	table = [(i, len([ratio for ratio in ratios if ratio>i])/len(ratios)) for i in np.arange(1.0,3.1,0.1)]
+	print(table)
+
+model(4,trans,62,weakdancer)
+model(4,trans,65,weakmask)
+model(68,condition,62,weakdancer)
+model(68,condition,65,weakmask)
+model(69,condition,62,weakdancer)
+model(69,condition,65,weakmask)
