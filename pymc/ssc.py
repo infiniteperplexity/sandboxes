@@ -80,6 +80,7 @@ def model(q1, vals1, q2, vals2):
 	mc1.sample(iter=50000,burn=10000)
 	ratios = mc1.trace('p1')[:, None]/mc0.trace('p0')[:, None]
 	print(sum(ratios)/len(ratios))
+	plt.gcf().clear()
 	plt.hist(ratios)
 	table = [(i, len([ratio for ratio in ratios if ratio>i])/len(ratios)) for i in np.arange(1.0,3.1,0.1)]
 	print(table)
@@ -117,6 +118,7 @@ base = 1/(1+np.exp(alphas))
 plt.hist(base, range=(0,0.1),bins=25)
 betas = mcmc.trace('beta')[:, None]
 odds = np.exp(betas)
+print(sum(odds)/len(odds))
 plt.gcf().clear()
 plt.hist(odds)
 
