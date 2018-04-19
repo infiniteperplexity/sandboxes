@@ -1,0 +1,12 @@
+{
+  "name": "my-project",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.70.0"
+  }
+}
