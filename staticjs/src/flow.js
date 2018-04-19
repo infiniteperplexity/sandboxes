@@ -1,6 +1,18 @@
-// @flow
-function square(n/*: number*/)/*: number*/ {
-  return n * n;
+//@flow
+
+let Monster = {template: "Monster"};
+
+function createChild(obj) {
+	let nobj = Object.create(obj);
+	nobj.name = "";
+	return (nobj: typeof nobj);
 }
 
-square("2"); // Error!
+let Goblin = createChild(Monster);
+
+let s: string = Goblin.template;
+let n: number = Goblin.template;
+let t: string = Goblin.thing;
+
+Goblin.name = "Gob";
+Goblin.height = 4;
