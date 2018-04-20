@@ -1,6 +1,12 @@
 // @flow
-function square(n/*: number*/)/*: number*/ {
-  return n * n;
-}
+Object.create;
+//(o: any, properties?: PropertyDescriptorMap) => any
 
-square("2"); // Error!
+let f = function() {
+	type fType = {foo: number} & {bar: string}; 
+};
+
+f();
+//type fType = {foo: number} & {bar: string}; 
+
+let baz: fType = {foo: 2, bar: "zap"};
