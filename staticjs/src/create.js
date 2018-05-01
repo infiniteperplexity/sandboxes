@@ -21,14 +21,12 @@ child = ((child: any): {
 	extend: <T: Object>(args: T) => {...typeof child, ...T},
 	create: <T: Object>(args: T) => typeof child
 });
-// should not error
 child.bar;
-// should error
+// correctly errors
 child.baz;
 let grandkid = child.extend({
 	baz: 3
 });
-// should not error
 grandkid.bar;
 grandkid.baz;
 let ggrand = grandkid.extend({
